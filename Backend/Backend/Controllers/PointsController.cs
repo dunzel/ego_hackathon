@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Backend.Models;
+using SchoolDataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,6 +11,7 @@ namespace Backend.Controllers
 {
     public class PointsController : ApiController
     {
+        MyContext db = new MyContext();
         // GET: api/Points
         public IEnumerable<string> Get()
         {
@@ -35,17 +38,39 @@ namespace Backend.Controllers
         public void Delete(int id)
         {
         }
-        public void UpdatePoints()
+        public void UpdateLongTermPoints(string id)
         {
-
+            User user = db.users.First(x => x.UserID == id);
+            if(user.Points<=4)
+            {
+                user.Points -= 4;
+            }
+            else
+            {
+                user.Points = 0;
+            }
+            db.SaveChangesAsync();
         }
-        public void AddPoints()
+        public void UpdatePoints(string id)
         {
-
+            User user =  db.users.First(x => x.UserID == id);
+            if(true) {
+                AddPoints(user);
+            }
+            else
+            {
+                DecPoints(user);
+            }
         }
-        public void DecPoints()
+        private void AddPoints(User user)
         {
-
+            user.Points += 2; 
+            db.SaveChangesAsync();
+        }
+        private void DecPoints(User user)
+        {
+            user.Points -= 2;
+            db.SaveChangesAsync();
         }
     }
 }
