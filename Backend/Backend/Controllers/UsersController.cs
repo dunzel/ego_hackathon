@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Backend.Models;
+using Backend.Models.ControllerModels;
 using SchoolDataLayer;
 
 namespace Backend.Controllers
@@ -19,18 +20,20 @@ namespace Backend.Controllers
 
 
         [HttpPost]
-        public bool Create([FromBody]string name, [FromBody]string password)
+        public string Create([FromBody]UserCreateModel userCreateModel)
         {
             try
             {
-                User user = new User { Name = name, Password = password, Points = 0 };
+                User user = new User { Name = userCreateModel.name, Password = userCreateModel.password, Points = 0 };
                 db.users.Add(user);
                 db.SaveChanges();
+
+                return user.UserID;
+
             } catch(Exception e)
             {
-                return false;
+                return "!ThisMightBeAnErrorBeCarefull!";
             }
-            return true;
         }
 
 
