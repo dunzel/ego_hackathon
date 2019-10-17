@@ -35,5 +35,17 @@ namespace Backend.Controllers
         public void Delete(int id)
         {
         }
+        public void UpdatePoints()
+        {
+
+        }
+        public void AddPoints()
+        {
+
+        }
+        public void DecPoints()
+        {
+
+        }
     }
 }
