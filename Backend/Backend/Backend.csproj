@@ -161,7 +161,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PointsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -169,6 +170,10 @@
     <Compile Include="Migrations\201910172214151_InitialCreate.cs" />
     <Compile Include="Migrations\201910172214151_InitialCreate.Designer.cs">
       <DependentUpon>201910172214151_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910172247355_usersIDChange.cs" />
+    <Compile Include="Migrations\201910172247355_usersIDChange.Designer.cs">
+      <DependentUpon>201910172247355_usersIDChange.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
@@ -264,6 +269,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201910172214151_InitialCreate.resx">
       <DependentUpon>201910172214151_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910172247355_usersIDChange.resx">
+      <DependentUpon>201910172247355_usersIDChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

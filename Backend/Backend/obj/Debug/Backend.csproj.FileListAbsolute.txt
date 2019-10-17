@@ -172,3 +172,4 @@ C:\Projekte\Hackathon\JETZTABERRICHTIG\ego_hackathon\Backend\Backend\obj\Debug\B
 C:\Projekte\Hackathon\JETZTABERRICHTIG\ego_hackathon\Backend\Backend\obj\Debug\Backend.pdb
 C:\Projekte\Hackathon\JETZTABERRICHTIG\ego_hackathon\Backend\Backend\obj\Debug\Backend.Migrations.InitialCreate.resources
 C:\Projekte\Hackathon\JETZTABERRICHTIG\ego_hackathon\Backend\Backend\obj\Debug\Backend.csproj.GenerateResource.cache
+C:\Projekte\Hackathon\JETZTABERRICHTIG\ego_hackathon\Backend\Backend\obj\Debug\Backend.Migrations.usersIDChange.resources
