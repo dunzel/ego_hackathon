@@ -18,6 +18,7 @@ import {
   CalendarView
 } from 'angular-calendar';
 import {Subject} from "rxjs";
+import {ApiService} from "../api.service";
 
 const colors: any = {
   red: {
@@ -78,7 +79,9 @@ export class Tab2Page {
 
   activeDayIsOpen: boolean = true;
 
-  constructor(private modal: NgbModal) {}
+  constructor(private modal: NgbModal, private apiService: ApiService) {
+    apiService.getReservations();
+  }
 
   eventTimesChanged({
                       event,
