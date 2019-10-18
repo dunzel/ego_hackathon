@@ -9,7 +9,7 @@ namespace Backend.Utilities
     {
         public ushort getTotalCars()
         {
-
+            return 4;
         }
     }
 }
